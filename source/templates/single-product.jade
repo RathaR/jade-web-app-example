@@ -1,0 +1,11 @@
+extend default
+
+block content
+    .single-product.page.visible
+        .overlay
+        .preview-large
+            h3 Single product
+            img(src='/images/#{product.image.large}')
+            p #{product.description}
+            span.close ×
+

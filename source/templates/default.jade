@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/css/styles.css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet')
+    title #{title}
+  body
+    header.compact
+      h2.tzine
+        a(href="http://tutorialzine.com/2015/02/single-page-app-without-a-framework/") Back to article
+      h1
+        a(href="#") Single Page App Without A Framework
+      ul.nav
+        li: a(href='/') Home
+        li: a(href='/about') About
+    .main-content
+      block content
+
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js')
+    script(src='/js/script.js' type='text/javascript')

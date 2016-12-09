@@ -1,0 +1,23 @@
+extend default
+
+mixin product-card(product)
+    li(data-index=product.id)
+        a(href='product/#{product.id}', class='product-photo')
+            img(src='/images/#{product.image.small}', height='130', alt=product.name)
+        h2: a #{product.name}
+        ul.product-description
+            li: span Manufacturer:
+                    span #{product.specs.manufacturer}
+            li: span Storage:
+                span #{product.specs.storage}
+            li: span OS:
+                span #{product.specs.os}
+            li: span Camera:
+                span #{product.specs.camera}
+
+block content
+    .all-products.page.visible
+        ul.products-list
+            for product in products
+                +product-card(product)
+
